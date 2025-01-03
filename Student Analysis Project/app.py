@@ -16,25 +16,62 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* Overall App Background and Font */
     .stApp {
-        background: linear-gradient(to right, #e3f2fd, #ffffff);
-        color: #333333;
+        background-color: #f0f0f5;
+        color: #262730;
+        font-family: "sans-serif";
     }
+
+    /* Button Styling */
     .stButton>button {
-        background-color: #6C63FF;
+        background-color: #6eb52f;
         color: white;
         border-radius: 10px;
         border: none;
         padding: 10px 20px;
     }
     .stButton>button:hover {
-        background-color: #5A52DB;
-        color: white;
+        background-color: #5a9e2e;
     }
+
+    /* Text Input Styling */
+    .stTextInput>input {
+        background-color: #e0e0ef;
+        color: #262730;
+    }
+
+    /* DataFrame Styling */
+    .stDataFrame {
+        background-color: #ffffff;
+        color: #262730;
+    }
+
+    /* Markdown Styling */
+    .stMarkdown {
+        color: #262730;
+    }
+
+    /* Sidebar Styling */
+    .css-1d391kg { /* Sidebar container */
+        background-color: #e0e0ef;
+        color: #262730;
+    }
+
+    .css-1d391kg a {
+        color: #262730;
+    }
+
+    .css-1d391kg a:hover {
+        color: #6eb52f;
+    }
+
     </style>
     """,
-    unsafe_allow_html=True,
+    unsafe_allow_html=True
 )
+
+
 
 # Define functions for EDA
 def load_data():
