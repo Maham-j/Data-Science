@@ -4,13 +4,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# # Streamlit App Configuration
-# st.set_page_config(
-#     page_title="Data Science Dashboard",
-#     page_icon="📊",
-#     layout="wide",
-#     initial_sidebar_state="expanded",
-# )
+# Streamlit App Configuration
+st.set_page_config(
+    page_title="💰 Bitcoin Historical Data Dashboard",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
 # Custom CSS for Light Theme
 st.markdown(
@@ -85,8 +85,9 @@ st.markdown(html_code, unsafe_allow_html=True)
 
 
 # Main content
-st.title("Welcome to Streamlit Prophet")
-# st.write("This app showcases a similar style as the provided logo.")
+st.title("💰 Bitcoin Historical Data ")
+st.markdown("<h3>📊 Explore 1-Minute Interval Data from 2012 to Today</h3>", unsafe_allow_html=True)
+
 
 
 # Define functions for EDA
@@ -117,13 +118,13 @@ def eda_visualizations(df):
         sns.heatmap(corr, annot=True, fmt='.2f', cmap='coolwarm')
         st.pyplot(plt)
 
-    # # Pairplot
-    # with col2:
-    #     st.write("### Pairplot")
-    #     st.write("This might take time for large datasets.")
-    #     plt.figure()
-    #     sns.pairplot(df)
-    #     st.pyplot(plt)
+    # Pairplot
+    with col2:
+        st.write("### Pairplot")
+        st.write("This might take time for large datasets.")
+        plt.figure()
+        sns.pairplot(df)
+        st.pyplot(plt)
 
     # Histogram of Close Prices
     with col1:
@@ -157,7 +158,6 @@ def eda_visualizations(df):
     with col2:
         st.write("### Missing Values Analysis")
         missing_data = df.isnull().sum()
-        st.write("Missing Values:")
         st.write(missing_data)
 
     # Missing Data Heatmap
@@ -279,18 +279,10 @@ def eda_visualizations(df):
         plt.legend(loc='upper left')
         st.pyplot(plt)
 
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import streamlit as st
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-# Step 1: Load and preprocess data
-# Example: Loading mock data (replace with your actual data loading method)
-# df = pd.read_csv("bitcoin_data.csv")  # Uncomment to load actual data
 def model_predictions():
 
     df = pd.DataFrame({
@@ -366,7 +358,7 @@ def show_conclusion():
 
 
 def main():
-    st.title("📊 Data Science Dashboard")
+    #st.title("📊 Explore 1-Minute Interval Data from 2012 to Today")
     st.markdown("---")
     st.sidebar.title("Navigation")
 
@@ -413,7 +405,6 @@ def main():
         """)
 
     elif choice == "Model":
-        st.header("Bitcoin Price Prediction Model")
         model_predictions() 
         # Pass a unique key
         df = load_data("model_file_uploader")
@@ -425,12 +416,7 @@ def main():
     if choice == "Conclusion":
         show_conclusion()
 
-        
-
-
-
     
-
     
 
 if __name__ == "__main__":
