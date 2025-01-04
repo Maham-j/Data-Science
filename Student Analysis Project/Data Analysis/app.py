@@ -118,13 +118,13 @@ def eda_visualizations(df):
         sns.heatmap(corr, annot=True, fmt='.2f', cmap='coolwarm')
         st.pyplot(plt)
 
-    # # Pairplot
-    # with col2:
-    #     st.write("### Pairplot")
-    #     st.write("This might take time for large datasets.")
-    #     plt.figure()
-    #     sns.pairplot(df)
-    #     st.pyplot(plt)
+    # Pairplot
+    with col2:
+        st.write("### Pairplot")
+        st.write("This might take time for large datasets.")
+        plt.figure()
+        sns.pairplot(df)
+        st.pyplot(plt)
 
     # Histogram of Close Prices
     with col1:
