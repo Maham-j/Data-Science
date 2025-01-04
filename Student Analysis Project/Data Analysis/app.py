@@ -280,17 +280,12 @@ def eda_visualizations(df):
         st.pyplot(plt)
 
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import streamlit as st
+
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-# Step 1: Load and preprocess data
-# Example: Loading mock data (replace with your actual data loading method)
-# df = pd.read_csv("bitcoin_data.csv")  # Uncomment to load actual data
+
 def model_predictions():
 
     df = pd.DataFrame({
