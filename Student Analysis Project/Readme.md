@@ -2,7 +2,7 @@
 
 Welcome to the **Bitcoin Historical Data Dashboard**! 🚀 This interactive and visually appealing Streamlit web application provides deep insights into Bitcoin's historical data and price trends. It's your one-stop solution for **Exploratory Data Analysis (EDA)**, **Machine Learning Predictions**, and **Interactive Visualizations**. 🌟
 
----
+---   
 
 ## 🗂 Features of the Dashboard:
 1. **Upload and View Data** 📂  
